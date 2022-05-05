@@ -1,10 +1,10 @@
 from functools import partial
 
 import pandas as pd
+import numpy as np
 from execution_environment.command_executor import Argument
 from otlang.sdk.syntax import Keyword
 from pp_exec_env.base_command import BaseCommand, Syntax
-from pp_exec_env.schema import np
 
 
 def match(df: pd.DataFrame, arg: Argument) -> pd.DataFrame:
