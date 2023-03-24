@@ -12,7 +12,11 @@ def match(df: pd.DataFrame, arg: Argument) -> pd.DataFrame:
 
 
 class Match(BaseCommand):
-    syntax = Syntax([Keyword(name="vals", inf=True)])
+    syntax = Syntax(
+        [
+            Keyword("vals", inf=True)
+        ]
+    )
 
     def transform(self, df: pd.DataFrame) -> pd.DataFrame:
         m = partial(match, df)
